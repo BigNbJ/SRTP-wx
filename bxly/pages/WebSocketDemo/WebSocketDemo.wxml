@@ -1,0 +1,9 @@
+<!--pages/WebSocketDemo/WebSocketDemo.wxml-->
+<view>
+    <view>测试内容</view>
+    <view>模拟向柜体发送存货指令</view>
+    <view>密码：066806</view>
+</view>
+<button type="default" bindtap='startClick'>连接</button>
+<button bindtap='sendClick'>发送</button>
+<button bindtap='closeClick'>断开</button>
