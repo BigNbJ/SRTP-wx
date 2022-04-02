@@ -5,12 +5,12 @@
     },
     "setting": {
         "urlCheck": false,
-        "es6": true,
-        "enhance": false,
+        "es6": false,
+        "enhance": true,
         "postcss": true,
         "preloadBackgroundData": false,
         "minified": true,
-        "newFeature": true,
+        "newFeature": false,
         "coverView": true,
         "nodeModules": false,
         "autoAudits": false,
@@ -35,11 +35,7 @@
         "packNpmManually": false,
         "packNpmRelationList": [],
         "minifyWXSS": true,
-        "disableUseStrict": false,
-        "minifyWXML": true,
-        "showES6CompileOption": false,
-        "useCompilerPlugins": false,
-        "ignoreUploadUnusedFiles": true
+        "showES6CompileOption": false
     },
     "compileType": "miniprogram",
     "libVersion": "2.11.1",

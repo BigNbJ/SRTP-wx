@@ -1,3 +1,5 @@
+import {request} from "../../request/index.js"
+
 // pages/guizi/guizi.js
 Page({
 
@@ -29,11 +31,23 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-     // this.data.parameter[0].checked = true;
-    //  this.setData({
-     //   parameter: this.data.parameter
-     // })
-       
+      /**
+       * 功能：向后台请求柜子信息，并动态渲染显示
+       * 时间：2022.4.2
+       * 作者：Jin
+       * 备注：写页面时可以忽略不记
+       */
+      request({
+        //url:"https://d7aa063d-6169-493a-97a4-f91e56c45fde.mock.pstmn.io",  
+        url:"http://localhost:8080/cupboard",
+        method:"POST"
+      })
+      .then(result=>{
+        console.log(result.data)
+        this.setData({
+          'isfull':result.data
+        })
+      })
     },
 
     /**
