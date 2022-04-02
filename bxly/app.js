@@ -33,6 +33,7 @@ App({
       }
     })
   },
+
   globalData: {
     isLoggedin:false,
     username:null

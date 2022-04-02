@@ -77,11 +77,11 @@ button.huoqvyanzm[disabled]:not([type]){
   padding: 30rpx;
   text-align: center;
 }
-/**
+
 .biaot_disanf{
 
 }
-*/
+
 .biaot_disanf .bt{
   color: #999;
   padding-bottom: 40rpx;

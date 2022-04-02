@@ -1,29 +1,29 @@
 {
-  "pages": [
-    
-    "pages/logs/logs",
-    "pages/index/index",
-    "pages/my/my",
-    "pages/huiyuan/huiyuan",
-    "pages/huiyuan_huiz/huiyuan_huiz",
-    "pages/huiyuan_mx/huiyuan_mx",
-    "pages/guz/guz",
-    "pages/youhuiq/youhuiq",
-    "pages/dd/dd",
-    "pages/dd_Xq/dd_Xq",
-    "pages/map/map",
-    "pages/my_fank/my_fank",
-    "pages/gywm/gywm",
-    "pages/gouwuc/gouwuc",
-    "pages/WebSocketDemo/WebSocketDemo"
-    
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "外卖智能柜",
-    "navigationBarTextStyle": "black"
-  },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+    "pages": [
+        "pages/guizi/guizi",
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/my/my",
+        "pages/huiyuan/huiyuan",
+        "pages/huiyuan_huiz/huiyuan_huiz",
+        "pages/huiyuan_mx/huiyuan_mx",
+        "pages/guz/guz",
+        "pages/youhuiq/youhuiq",
+        "pages/dd/dd",
+        "pages/dd_Xq/dd_Xq",
+        "pages/map/map",
+        "pages/my_fank/my_fank",
+        "pages/gywm/gywm",
+        "pages/gouwuc/gouwuc",
+        "pages/WebSocketDemo/WebSocketDemo"
+        
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "外卖智能柜",
+        "navigationBarTextStyle": "black"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
 }

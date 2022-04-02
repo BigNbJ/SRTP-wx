@@ -30,18 +30,21 @@
             "disablePlugins": [],
             "outputPath": ""
         },
-        "enableEngineNative": false,
         "useIsolateContext": true,
         "userConfirmedBundleSwitch": false,
         "packNpmManually": false,
         "packNpmRelationList": [],
         "minifyWXSS": true,
-        "showES6CompileOption": false
+        "disableUseStrict": false,
+        "minifyWXML": true,
+        "showES6CompileOption": false,
+        "useCompilerPlugins": false,
+        "ignoreUploadUnusedFiles": true
     },
     "compileType": "miniprogram",
     "libVersion": "2.11.1",
-    "appid": "wx8ff42dfb60c277d6",
-    "projectname": "SRTP-wx-e喵",
+    "appid": "wx90608edee7ebdbdb",
+    "projectname": "bxly",
     "debugOptions": {
         "hidedInDevtools": []
     },

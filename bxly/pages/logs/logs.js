@@ -62,41 +62,29 @@ Page({
         method:"POST"
       })
       .then(result=>{
-        if(result.data.id!=null){
-          //打印返回信息
-          console.log(result.data)
-          //设置全局变量-用户名
-          app.globalData.username=result.data.username
-          //设置全局变量-登录
-          app.globalData.isLoggedin=true
-          //打印用户名信息
-          console.log(app.globalData.username)
-          //显示登录成功弹窗
-          wx.showToast({
-            title: '登录成功',
-            icon: 'succes',
-            duration: 1000,
-            mask:true
-          })
-          setTimeout(function () {
-            //跳转界面
-            wx.navigateTo({
-              url: '../index/index'
-            })
-            //要延时执行的代码
-          }, 800) //延迟时间
-        }
-        else{
-          //若返回空信息，表示没有查询到，则账号或密码错误
-          console.log("查询错误");
-          wx.showToast({
-            title: '密码或账号错误',
-            icon: 'none',
-            duration: 1000,
-            mask:true
-          })
-        }
+        //打印返回信息
+        console.log(result.data)
         
+        //设置全局变量-用户名
+        app.globalData.username=result.data.username
+        //设置全局变量-登录
+        app.globalData.isLoggedin=true
+        //打印用户名信息
+        console.log(app.globalData.username)
+        //显示登录成功弹窗
+        wx.showToast({
+          title: '登录成功',
+          icon: 'succes',
+          duration: 1000,
+          mask:true
+        })
+        setTimeout(function () {
+          //跳转界面
+          wx.navigateTo({
+            url: '../index/index'
+          })
+          //要延时执行的代码
+        }, 800) //延迟时间
       })
     }
   }

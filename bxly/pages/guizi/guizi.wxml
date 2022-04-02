@@ -1,0 +1,32 @@
+<!--pages/guizi/guizi.wxml-->
+<!--<text>pages/guizi/guizi.wxml</text>-->
+
+
+
+<!--说明-->
+<view >
+    <swiper class="swiper" autoplay="true" interval="2000" circular="true">
+    <swiper-item>
+      <image src="/images/test1.jpeg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/test2.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/test3.jpg"></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+<!--柜子选择-->
+<view class='Title'>选中{{nowSelect}}号柜</view>
+  <view class='parameter-wrap'>
+    <block wx:for="{{parameter}}" wx:for-index="idx" >
+  
+        <button wx:if="{{isfull[idx]}}" class='{{item.checked?"checked_button":"normal_button"}}' data-id="{{idx+1}}" 	hover-class="button-hover" size="mini"  type="primary"  bindtap='parameterTap'>{{item.name}}</button>
+        <button wx:else="{{isfull[idx]}}" class="mini-btn" size="mini" plain="true" type="primary" disabled="True" bindtap='parameterTap'>{{item.name}}</button>
+    
+    </block>
+  </view>
+
+<button class="YesButton"   type="primary" bindtap="nextStep" color="blue">下一步</button>
