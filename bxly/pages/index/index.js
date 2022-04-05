@@ -75,10 +75,13 @@ Page({
     wx.scanCode({
       success: (res) => {
         var result = res.result;
+        if(result=='进入柜子选择页面'){
+          console.log('扫码成功')
+          wx.navigateTo({
+            url:'../guizi/guizi'
+          })
+        }
 
-        _this.setData({
-          result: result,
-        })
       }
     })
   }

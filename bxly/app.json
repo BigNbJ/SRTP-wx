@@ -1,7 +1,8 @@
 {
     "pages": [
-        "pages/guizi/guizi",
         "pages/index/index",
+        "pages/guizi/guizi",
+        
         "pages/logs/logs",
         "pages/my/my",
         "pages/huiyuan/huiyuan",
