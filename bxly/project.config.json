@@ -22,9 +22,9 @@
         "uploadWithSourceMap": true,
         "compileHotReLoad": false,
         "lazyloadPlaceholderEnable": false,
-        "useMultiFrameRuntime": true,
-        "useApiHook": true,
-        "useApiHostProcess": true,
+        "useMultiFrameRuntime": false,
+        "useApiHook": false,
+        "useApiHostProcess": false,
         "babelSetting": {
             "ignore": [],
             "disablePlugins": [],
@@ -39,7 +39,6 @@
     },
     "compileType": "miniprogram",
     "libVersion": "2.11.1",
-    "appid": "wx90608edee7ebdbdb",
     "projectname": "bxly",
     "debugOptions": {
         "hidedInDevtools": []
@@ -47,6 +46,7 @@
     "isGameTourist": false,
     "simulatorType": "wechat",
     "simulatorPluginLibVersion": {},
+    "appid": "wx882cc7a36f45bda1",
     "condition": {
         "search": {
             "list": []

@@ -8,7 +8,8 @@ Page({
      */
    
     data: {
-        isfull:[1,1,1,0,0,0,1,0,1,1,0,0],   //柜子状态
+        isfull:[1,1,1,0,0,0,1,0,1,1,0,0],   //柜子状态   1空 0满
+        isDamaged:[1,0,0,0,0,0,0,0,0,0,0],
         nowSelect:1,
 
         parameter:[
@@ -31,6 +32,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+
       /**
        * 功能：向后台请求柜子信息，并动态渲染显示
        * 时间：2022.4.2
@@ -39,7 +41,7 @@ Page({
        */
       request({
         //url:"https://d7aa063d-6169-493a-97a4-f91e56c45fde.mock.pstmn.io",  
-        url:"http://localhost:8080/cupboard",
+        url:"http://localhost:8080/cupboard/query",
         method:"POST"
       })
       .then(result=>{
@@ -48,6 +50,7 @@ Page({
           'isfull':result.data
         })
       })
+      
     },
 
     /**
@@ -151,6 +154,51 @@ Page({
 
     /*选好柜子后点击下一步*/
     nextStep:function(){
+      var select = this.data.nowSelect;
+      //console.log(this.data.nowSelect)
+      if(this.data.isfull[this.data.nowSelect-1]&&this.data.isDamaged[this.data.nowSelect-1]==0){  //如果用户选中的是可用箱子      
+        wx.showModal({               // this.data.isDamaged==1为停用 0为正常
+          title: '提示',             //this.data.nowSelect为柜子编号（从1开始）
+          content: '是否打开'+this.data.nowSelect.toString()+'号柜',
+          success: function (res) {
+            if (res.confirm) {    //确认打开柜子
+              console.log('用户点击确定')
+
+              request({
+                //url:"https://d7aa063d-6169-493a-97a4-f91e56c45fde.mock.pstmn.io",  
+                url:"http://localhost:8080/cupboard/open",
+                method:"POST",
+                data:{
+                  'sendPhone':'17727903712',
+                  'receivePhone':'18957910921',
+                  cupboardID:select,
+                  'openKey':'159357' 
+                }
+              })
+              .then(result=>{
+                console.log(result.data)
+              })
+
+            } else {              //取消打开柜子
+              console.log('用户点击取消')
+            }
+          }
+        })
+      }else{                                                                                       //如果用户选中的是停用箱子
+        wx.showModal({
+          title: '提示',
+          content: '此柜子暂停使用',
+          success: function (res) {
+            if (res.confirm) {    //确认打开柜子
+              console.log('用户点击确定')
+            } else {              //取消打开柜子
+              console.log('用户点击取消')
+            }
+          }
+        })
+      }
+      
+
 
         this.setData({
             
