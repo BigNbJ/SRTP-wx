@@ -41,7 +41,7 @@ Page({
        */
       request({
         //url:"https://d7aa063d-6169-493a-97a4-f91e56c45fde.mock.pstmn.io",  
-        url:"http://localhost:8080/cupboard",
+        url:"http://localhost:8080/cupboard/query",
         method:"POST"
       })
       .then(result=>{
@@ -154,6 +154,8 @@ Page({
 
     /*选好柜子后点击下一步*/
     nextStep:function(){
+      var select = this.data.nowSelect;
+      //console.log(this.data.nowSelect)
       if(this.data.isfull[this.data.nowSelect-1]&&this.data.isDamaged[this.data.nowSelect-1]==0){  //如果用户选中的是可用箱子      
         wx.showModal({               // this.data.isDamaged==1为停用 0为正常
           title: '提示',             //this.data.nowSelect为柜子编号（从1开始）
@@ -161,6 +163,22 @@ Page({
           success: function (res) {
             if (res.confirm) {    //确认打开柜子
               console.log('用户点击确定')
+
+              request({
+                //url:"https://d7aa063d-6169-493a-97a4-f91e56c45fde.mock.pstmn.io",  
+                url:"http://localhost:8080/cupboard/open",
+                method:"POST",
+                data:{
+                  'sendPhone':'17727903712',
+                  'receivePhone':'18957910921',
+                  cupboardID:select,
+                  'openKey':'159357' 
+                }
+              })
+              .then(result=>{
+                console.log(result.data)
+              })
+
             } else {              //取消打开柜子
               console.log('用户点击取消')
             }
