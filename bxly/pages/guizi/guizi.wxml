@@ -1,9 +1,6 @@
 <!--pages/guizi/guizi.wxml-->
 <!--<text>pages/guizi/guizi.wxml</text>-->
-
-
-
-<!--说明-->
+<!--
 <view >
     <swiper class="swiper" autoplay="true" interval="2000" circular="true">
     <swiper-item>
@@ -17,6 +14,14 @@
     </swiper-item>
   </swiper>
 </view>
+-->
+
+<view class="editor">存货人手机号：
+    <input class="input" name="userName" placeholder="-" type="number" bindinput="Cun_CellnumInput"/>
+  </view>
+<view class="editor">取货人手机号：
+    <input class="input"  placeholder="-" type="number" bindinput="Qu_CellnumInput" />
+  </view>
 
 <!--柜子选择-->
 <view class='Title'>选中{{nowSelect}}号柜</view>

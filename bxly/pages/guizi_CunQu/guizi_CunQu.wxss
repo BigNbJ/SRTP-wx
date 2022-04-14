@@ -1,0 +1,5 @@
+/* pages/guizi_CunQu/guizi_CunQu.wxss */
+
+Button{
+    margin-top: 180rpx;
+}

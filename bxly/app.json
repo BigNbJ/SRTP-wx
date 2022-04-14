@@ -1,8 +1,8 @@
 {
     "pages": [
+       
         "pages/index/index",
         "pages/guizi/guizi",
-        
         "pages/logs/logs",
         "pages/my/my",
         "pages/huiyuan/huiyuan",
@@ -16,8 +16,9 @@
         "pages/my_fank/my_fank",
         "pages/gywm/gywm",
         "pages/gouwuc/gouwuc",
-        "pages/WebSocketDemo/WebSocketDemo"
-        
+        "pages/WebSocketDemo/WebSocketDemo",
+        "pages/guizi_CunQu/guizi_CunQu"
+       
     ],
     "window": {
         "backgroundTextStyle": "light",

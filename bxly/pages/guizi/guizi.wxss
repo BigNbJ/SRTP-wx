@@ -32,8 +32,9 @@ button{
   }
 
   .parameter-wrap{
-    margin-top:10rpx;
-    opacity: 0.5;
+    margin-top:30rpx;
+    opacity: 0.9;
+    justify-content:center;
   }
 
   .checked_button{
@@ -53,4 +54,9 @@ button{
   .Title{
     margin-top: 30rpx;
     text-align: center;
+  }
+
+  .editor{
+    margin-top: 50rpx;
+    margin-left: 70rpx;
   }

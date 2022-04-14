@@ -11,7 +11,9 @@ Page({
         isfull:[1,1,1,0,0,0,1,0,1,1,0,0],   //柜子状态   1空 0满
         isDamaged:[1,0,0,0,0,0,0,0,0,0,0],
         nowSelect:1,
-
+        Cun_Cellnum:'0',                   //存货人号码
+        Qu_Cellnum:'0',                    //取货人号码
+ 
         parameter:[
             { name:'01柜',value:'0' },
             { name:'02柜',value:'1' },
@@ -155,6 +157,9 @@ Page({
     /*选好柜子后点击下一步*/
     nextStep:function(){
       var select = this.data.nowSelect;
+      var Cun_Cellnum=this.data.Cun_Cellnum     //存货人手机号  
+      var Qu_Cellnum=this.data.Qu_Cellnum       //取货人手机号
+      
       //console.log(this.data.nowSelect)
       if(this.data.isfull[this.data.nowSelect-1]&&this.data.isDamaged[this.data.nowSelect-1]==0){  //如果用户选中的是可用箱子      
         wx.showModal({               // this.data.isDamaged==1为停用 0为正常
@@ -163,7 +168,9 @@ Page({
           success: function (res) {
             if (res.confirm) {    //确认打开柜子
               console.log('用户点击确定')
-
+              console.log(select.toString()+'号柜子')
+              console.log('存货人：'+Cun_Cellnum)
+              console.log('取货人：'+Qu_Cellnum)          
               request({
                 //url:"https://d7aa063d-6169-493a-97a4-f91e56c45fde.mock.pstmn.io",  
                 url:"http://localhost:8080/cupboard/open",
@@ -205,4 +212,16 @@ Page({
              } ) 
     },
 
+    Cun_CellnumInput:function(e){      
+      let box= e.detail.value.toString()
+      this.setData({
+        Cun_Cellnum:box
+      })
+    },
+    Qu_CellnumInput:function(e){
+      let box= e.detail.value.toString()
+      this.setData({
+        Qu_Cellnum:box
+      })
+    },
 })

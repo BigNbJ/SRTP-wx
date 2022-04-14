@@ -78,7 +78,7 @@ Page({
         if(result=='进入柜子选择页面'){
           console.log('扫码成功')
           wx.navigateTo({
-            url:'../guizi/guizi'
+            url:'../guizi_CunQu/guizi_CunQu'
           })
         }
 

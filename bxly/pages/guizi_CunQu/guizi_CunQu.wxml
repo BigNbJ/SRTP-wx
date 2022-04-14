@@ -1,0 +1,5 @@
+<!--pages/guizi_CunQu/guizi_CunQu.wxml-->
+
+<button type="Button" bindtap="Cun" plain="true" style="width:60vw" style="height:30vw" style="line-height: 30vw" >我要存</button>
+
+<button type="Button" bindtap="Qu" plain="true" style="width:60vw" style="height:30vw" style="line-height: 30vw">我要取</button>
